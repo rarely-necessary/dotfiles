@@ -1,0 +1,197 @@
+configuration {
+    modi: "drun,window";
+    lines: 10;
+    columns: 2;
+    font: "icomoon-feather 18";
+    fixed-num-lines: true;
+    show-icons: false;
+    sidebar-mode: true;
+    separator-style: "none";
+    hide-scrollbar: true;
+    fullscreen: false;
+    fake-transparency: false;
+    window-format: "[{w}]    {c}      {t}";
+    click-to-exit: true;
+    display-window: "";
+    display-drun: "";
+    window-thumbnail: false;
+}
+
+/*
+    window
+        overlay
+        mainbox
+            inputbar
+                box
+                case-indicator
+                prompt
+                entry
+                num-rows
+                num-filtered-rows
+            listview
+                scrollbar
+                element
+                    element-icon
+                    element-index
+                    element-text
+            mode-switcher
+                button
+            message
+                textbox
+
+┌────────────────────────────────────────────────────────────────────────────────────┐
+│ window {BOX:vertical}                                                              │
+│ ┌───────────────────────────────────────────────────────────────────────────────┐  │
+│ │ mainbox  {BOX:vertical}                                                       │  │
+│ │ ┌───────────────────────────────────────────────────────────────────────────┐ │  │
+│ │ │ inputbar {BOX:horizontal}                                                 │ │  │
+│ │ │ ┌─────────┐ ┌─┐ ┌───────────────────────────────┐ ┌───┐ ┌───┐ ┌───┐ ┌───┐ │ │  │
+│ │ │ │ prompt  │ │:│ │ entry                         │ │#fr│ │ / │ │#ns│ │ci │ │ │  │
+│ │ │ └─────────┘ └─┘ └───────────────────────────────┘ └───┘ └───┘ └───┘ └───┘ │ │  │
+│ │ └───────────────────────────────────────────────────────────────────────────┘ │  │
+│ │                                                                               │  │
+│ │ ┌───────────────────────────────────────────────────────────────────────────┐ │  │
+│ │ │ message                                                                   │ │  │
+│ │ │ ┌───────────────────────────────────────────────────────────────────────┐ │ │  │
+│ │ │ │ textbox                                                               │ │ │  │
+│ │ │ └───────────────────────────────────────────────────────────────────────┘ │ │  │
+│ │ └───────────────────────────────────────────────────────────────────────────┘ │  │
+│ │                                                                               │  │
+│ │ ┌───────────────────────────────────────────────────────────────────────────┐ │  │
+│ │ │ listview                                                                  │ │  │
+│ │ │ ┌─────────────────────────────────────────────────────────────────────┐   │ │  │
+│ │ │ │ element                                                             │   │ │  │
+│ │ │ │ ┌─────────────────┐ ┌─────────────────────────────────────────────┐ │   │ │  │
+│ │ │ │ │element─icon     │ │element─text                                 │ │   │ │  │
+│ │ │ │ └─────────────────┘ └─────────────────────────────────────────────┘ │   │ │  │
+│ │ │ └─────────────────────────────────────────────────────────────────────┘   │ │  │
+│ │ └───────────────────────────────────────────────────────────────────────────┘ │  │
+│ │                                                                               │  │
+│ │ ┌───────────────────────────────────────────────────────────────────────────┐ │  │
+│ │ │  mode─switcher {BOX:horizontal}                                           │ │  │
+│ │ │ ┌───────────────┐   ┌───────────────┐  ┌──────────────┐ ┌───────────────┐ │ │  │
+│ │ │ │ Button        │   │ Button        │  │ Button       │ │ Button        │ │ │  │
+│ │ │ └───────────────┘   └───────────────┘  └──────────────┘ └───────────────┘ │ │  │
+│ │ └───────────────────────────────────────────────────────────────────────────┘ │  │
+│ └───────────────────────────────────────────────────────────────────────────────┘  │
+└────────────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│ window {BOX:vertical}                                                            │
+│ ┌─────────────────────────────────────────────────────────────────────────────┐  │
+│ │ error─message {BOX:vertical}                                                │  │
+│ │ ┌────────────────────────────────────────────────────────────────────────┐  │  │
+│ │ │ textbox                                                                │  │  │
+│ │ └────────────────────────────────────────────────────────────────────────┘  │  │
+│ └─────────────────────────────────────────────────────────────────────────────┘  │
+└──────────────────────────────────────────────────────────────────────────────────┘
+*/
+* {
+    background-color: @x0;
+}
+
+textbox-prompt-colon {
+    str: "";
+}
+
+error-message {
+    padding: 41;
+}
+
+textbox {
+    background-color: @x0;
+    text-color: @xfg;
+}
+
+window {
+    background-color: @x0;
+    border: 1;
+    border-color: @x15;
+    border-radius: 0;
+    padding: 0 10;
+    width: 960;
+    height: 540;
+}
+
+mainbox {
+    border: 0px;
+    padding: 41;
+}
+
+prompt {
+    color: @x3;
+}
+
+entry {
+    color: @xfg;
+}
+
+num-rows {
+    color: @x9;
+}
+
+num-filtered-rows {
+    color: @x9;
+}
+
+listview {
+    border: 0px;
+    spacing: 2px;
+    scrollbar: false;
+    padding: 30px 0px;
+}
+
+element {
+    border: 0;
+    padding: 1px;
+    background-color: #00000000;
+    padding: 5px 0;
+}
+
+element normal.normal {
+    text-color: @x9;
+    background-color: #00000000;
+}
+
+element alternate.normal {
+    text-color: @x9;
+    background-color: #00000000;
+}
+
+element normal.active {
+    text-color: @x9;
+    background-color: #00000000;
+}
+
+element normal.active {
+    text-color: @x9;
+    background-color: #1e1e1e;
+}
+
+element selected.normal {
+    text-color: @xfg;
+    background-color: #00000000;
+}
+
+element selected.active {
+    text-color: @xfg;
+    background-color: @x11;
+}
+
+mode-switcher {
+    padding: 0px 50px;
+    spacing: 100px;
+}
+
+button {
+    padding: 5px 0;
+    text-color: @x8;
+    background-color: @x13;
+}
+
+button selected {
+    text-color: @x0;
+    background-color: @x15;
+}
+
+@import "colors-elly.rasi"

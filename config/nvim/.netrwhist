@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/dan/.config/awesome/elemental/sidebar'
+let g:netrw_dirhist_1='/home/dan/.config/nvim/after/ftplugin'
+let g:netrw_dirhist_0='/home/dan/.config'
+let g:netrw_dirhist_9='/home/dan'
+let g:netrw_dirhist_8='/home/dan/.config'
+let g:netrw_dirhist_7='/home/dan/.config/nvim'
+let g:netrw_dirhist_6='/home/dan/.local/share/nvim/site/pack/paqs/start/nvim-tree.lua/lua'
+let g:netrw_dirhist_5='/home/dan/.local/share/nvim/site/pack/paqs/start/nvim-tree.lua/plugin'
+let g:netrw_dirhist_4='/home/dan/.local/share/nvim/site/pack/paqs/start/nvim-tree.lua/lua'
+let g:netrw_dirhist_3='/home/dan/.config/nvim'

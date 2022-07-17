@@ -1,0 +1,94 @@
+* {
+  all: unset;
+}
+
+window {
+  background-image: url('file:///usr/share/backgrounds/default.png');
+  background-size: cover;
+  background-position: center;
+  color: #e0e5eb;
+}
+
+label {
+  color: #f6e3c9;
+}
+
+button {
+  min-height: 22px;
+  min-width: 20px;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: #e0e5eb;
+  border-color: rgba(255, 255, 255, 0.12);
+  background-color: #1c1c1c;
+}
+
+button seperator {
+  margin: 4px 4px;
+}
+
+button:hover {
+  color: #b2becd;
+  border-color: rgba(255, 255, 255, 0.12);
+  background-color: #313131;
+}
+
+button:active {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.75);
+  background-color: #c9913a;
+}
+
+button.suggestion-action {
+  background-clip: border-box;
+  color: #ffffff;
+  background-color: #c9913a;
+  border-color: #b78332;
+}
+
+
+combobox * {
+  background-color: #0f0f0f;
+  color: #e0e5eb;
+}
+
+combobox button.combo {
+  min-width: 0;
+  padding-left: 8px;
+  padding-right:  8px;
+}
+
+combobox arrow {
+  min-height: 16px;
+  min-width: 16px;
+}
+
+combobox:drop(active) button.combo {
+  color: #c9913a;
+  border-color: #c9913a;
+  box-shadow: none;
+}
+
+box#body {
+  background-color: transparent;
+}
+
+box#body label {
+  color: #e0e5eb;
+}
+
+entry {
+  border: 0px solid;
+  min-height: 22px;
+  padding: 2px 8px;
+  color: rgba(221, 229, 238, 0.8);
+  background-color: #0f0f0f;
+}
+
+entry:focus {
+  border-bottom: 1px solid;
+  color: rgba(221, 229, 238, 0.8);
+  border-color: #c9913a;
+  background-color: #1c1c1c;
+}

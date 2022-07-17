@@ -1,0 +1,7 @@
+column_width = 120 # Default
+line_endings = "Unix" # Default
+indent_width = 4 # Default
+call_parentheses = "Always" # Default
+
+indent_type = "Spaces"
+quote_style = "AutoPreferSingle"
