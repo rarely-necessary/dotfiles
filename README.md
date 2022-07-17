@@ -6,13 +6,13 @@
 Personal collection of dotfiles, will change periodically as I get bored.
 
 # My Setup
-- **WM**          _AwesomeWM_
-- **OS**           _Arch Linux_
+- **WM**        _AwesomeWM_
+- **OS**          _Arch Linux_
 - **Shell**         _zsh_
 - **Terminal**      _kitty_
 - **Editor**        _Neovim_
 - **File Manager**  _Nautilus_
-- **Launcher**     _rofi_
+- **Launcher**      _rofi_
 
 # Extra Requirements
 - NERD font
